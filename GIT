@@ -25,7 +25,9 @@ git show HEAD~ or HEAD~1
 ^ refers to the parent commits
 in a merge commit ^2 refers to the second parent of the commits
 ^^ refers to the first parent's first parent
-
+git reset --soft HEAD^ #How to uncommit last commit but keep in the staging area
+git reset HEAD^ #If you want to undo the act of committing and everything you'd staged, but leave the work tree (your files intact)
+git reset --hard HEAD^  #throwing away all uncommitted changes, resetting everything to the previous commit
 
 git tag
 git tag -a -m 'include feature 2' v2.0
