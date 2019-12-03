@@ -1,0 +1,49 @@
+git --version
+git status --short or git status -s
+git help or git init -h
+git config --global user.name 'Mirko Ravasi'
+git config user.name #to get the user name used
+git config --global user.email 'mirko.ravasi@leonteq.com'
+git config user.email
+
+mkdir #to create a repository
+git init #to start managing the directory with git
+ls -a #to show all the content of the directory -a (hidden files)
+git rm --cached file.txt #to unstage file from the stagin area
+git log --online -3 #only the 3 most recent commits
+git log --all -oneline --graph
+git clone HTTPS
+git remote -v
+git remote add <name> <URL>
+git push -u origin master
+
+git hash-object <file> #to create a sha-1 of the obje
+git show HEAD
+git show HEAD~ or HEAD~1
+
+~ refers to the previous commits while
+^ refers to the parent commits
+in a merge commit ^2 refers to the second parent of the commits
+^^ refers to the first parent's first parent
+
+
+git tag
+git tag -a -m 'include feature 2' v2.0
+git push <remote> --tag
+
+DETACHED HEAD it happens when the HEAD point directly to a commit and not
+to a branch label, you can create a branch from a previous commit and
+return to a not detached head state
+
+git branch -d <name> #to delete a branch
+git branch -D <name> to delete a branch with unmerged work
+git branch --all
+git reflog #return a local list of recent HEAD commits, it only works locally
+
+git checkout -b <name> <SHA-1> create a branch pointing at a commit
+
+git merge --no-ff #will always create a merge commit even if the merge is ff
+
+
+git log origin/master --oneline
+git remote set-head <remote> <branch> #change the remote tracking branch
